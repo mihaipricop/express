@@ -1,0 +1,50 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "mongoose": "latest",
+    "morgan": "latest",
+    "passport": "latest",
+    "passport-local": "latest",
+    "validator": "^13.12.0",
+    "winston": "latest"
+  },
+  "devDependencies": {
+    "@types/validator": "latest",
+    "@types/bcrypt": "latest",
+    "@types/cors": "latest",
+    "@types/express": "latest",
+    "@types/express-session": "latest",
+    "@types/jest": "latest",
+    "@types/mongoose": "latest",
+    "@types/morgan": "latest",
+    "@types/node": "latest",
+    "@types/passport": "latest",
+    "@types/passport-local": "latest",
+    "@types/supertest": "latest",
+    "jest": "latest",
+    "jest-environment-jsdom": "latest",
+    "mongodb-memory-server": "latest",
+    "supertest": "latest",
+    "ts-jest": "latest",
+    "ts-node": "latest",
+    "typescript": "latest"
+  }
+}
