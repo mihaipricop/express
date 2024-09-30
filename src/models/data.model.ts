@@ -21,8 +21,7 @@ const dataSchema: Schema = new Schema({
   },
   email: { 
     type: String, 
-    required: [true, 'Email is required'], 
-    unique: true, 
+    required: [true, 'Email is required'],
     lowercase: true, 
     validate: {
       validator: (value: string) => validator.isEmail(value),
