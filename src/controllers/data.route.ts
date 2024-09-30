@@ -39,12 +39,12 @@ export async function createData(req: any, res: Response) {
     await data.save();
     res.status(201).json(data);
   } catch (error) {
+    logger.error(error);
     if (error instanceof mongoose.Error.ValidationError) {
       const errors = Object.values(error.errors).map(err => err.message);
       res.status(400).json({ error: 'Validation Error', messages: errors });
     } else {
-      logger.error(error);
-      res.status(400).json({ error: "Bad Request" });
+      res.status(500).json({ error: "Internal Server Error" });
     }
   }
 }
@@ -62,7 +62,12 @@ export async function updateData(req: any, res: Response) {
     res.status(200).json(data);
   } catch (error) {
     logger.error(error);
-    res.status(400).json({ error: "Bad Request" });
+    if (error instanceof mongoose.Error.ValidationError) {
+      const errors = Object.values(error.errors).map(err => err.message);
+      res.status(400).json({ error: 'Validation Error', messages: errors });
+    } else {
+      res.status(500).json({ error: "Internal Server Error" });
+    }
   }
 }
 export async function deleteData(req: any, res: Response) {

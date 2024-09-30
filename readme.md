@@ -51,6 +51,7 @@ The backend service is an Express.js application that serves as a backend servic
 - `POST /login`: Authenticates the user
 - `GET /logout`: Ends the current logged in user session
 - `GET /data`: Returns all data owned by a user
+- `POST /data`: Creates a record
 - `GET /data/:id`: Returns a record by ID if the current authenticated user is the owner
 - `PUT /data/:id`: Updated a record
 - `DEL /data/:id`: Deletes a record

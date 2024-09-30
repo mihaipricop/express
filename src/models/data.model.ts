@@ -10,7 +10,7 @@ interface IData extends Document {
   course: string;
   semester: string;
   year: string;
-  owner: mongoose.Types.ObjectId;
+  owner: string;
 }
 
 const dataSchema: Schema = new Schema({
